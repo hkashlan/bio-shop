@@ -1,0 +1,13 @@
+
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "./.vscode/daisyui.md"
+    },
+    {
+      "file": "./.vscode/angular.txt"
+    },
+  ],
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
+}

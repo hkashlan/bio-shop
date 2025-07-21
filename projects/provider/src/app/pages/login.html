@@ -1,0 +1,37 @@
+<div class="min-h-screen flex items-center justify-center bg-base-200">
+  <div class="card w-full max-w-md shadow-xl bg-base-100">
+    <div class="card-body">
+      <h2 class="card-title text-3xl font-bold mb-2 justify-center">Sign in to your account</h2>
+      <p class="text-center text-base-content/70 mb-6">Welcome back! Please enter your details.</p>
+      <form>
+        <div class="mb-4">
+          <label class="input ">
+            <span class="label">Email</span>
+            <input type="email" class="input" placeholder="you@email.com" required />
+          </label>
+        </div>
+        <div class="mb-4">
+          <label class="input">
+            <span class="label">Password</span>
+            <input type="password" class="input grow" placeholder="••••••••" required />
+          </label>
+        </div>
+        <div class="flex items-center justify-between mb-6">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="checkbox checkbox-primary" />
+            <span class="text-sm">Remember me</span>
+          </label>
+          <a href="#" class="link link-primary text-sm">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block text-lg">Sign In</button>
+      </form>
+      <div class="divider">OR</div>
+      <button class="btn btn-outline btn-block mb-2">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.35 11.1H12.18v2.92h5.32c-.23 1.23-1.4 3.6-5.32 3.6-3.2 0-5.82-2.65-5.82-5.92s2.62-5.92 5.82-5.92c1.82 0 3.04.77 3.74 1.43l2.56-2.5C17.1 4.5 14.86 3.4 12.18 3.4 6.98 3.4 2.82 7.56 2.82 12.68c0 5.12 4.16 9.28 9.36 9.28 5.4 0 8.96-3.8 8.96-9.16 0-.62-.06-1.1-.15-1.6z"></path></svg>
+        Sign in with Google
+      </button>
+      <p class="text-center mt-4 text-sm">Don't have an account? <a href="#" class="link link-primary">Sign up</a></p>
+      <a routerLink="/upload" class="btn btn-primary mt-4">Go to Upload Page</a>
+    </div>
+  </div>
+</div>

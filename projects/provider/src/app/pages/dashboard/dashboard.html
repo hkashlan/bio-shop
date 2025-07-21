@@ -1,0 +1,139 @@
+<!-- Responsive Dashboard Page using daisyUI 5 -->
+<div class="drawer lg:drawer-open min-h-screen bg-base-200">
+  <!-- Sidebar toggle for mobile -->
+  <input id="dashboard-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-md sticky top-0 z-20">
+      <div class="flex-none lg:hidden">
+        <label for="dashboard-drawer" class="btn btn-square btn-ghost drawer-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </label>
+      </div>
+      <div class="flex-1 px-2 text-xl font-bold">Bio Shop Dashboard</div>
+      <div class="flex-none hidden lg:block">
+        <span class="badge badge-primary">Admin</span>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <main class="p-4 flex flex-col gap-6">
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body">
+            <h2 class="card-title">Sales</h2>
+            <p class="text-3xl font-bold">$12,340</p>
+            <p class="text-success">+15% this month</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body">
+            <h2 class="card-title">Orders</h2>
+            <p class="text-3xl font-bold">1,234</p>
+            <p class="text-info">+8% this month</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body">
+            <h2 class="card-title">Customers</h2>
+            <p class="text-3xl font-bold">567</p>
+            <p class="text-warning">+3% this month</p>
+          </div>
+        </div>
+      </div>
+      <!-- Fake Chart -->
+      <div class="card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Revenue Overview</h2>
+          <div class="w-full h-48 flex items-end gap-2">
+            <!-- Fake bar chart -->
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-primary rounded-t w-full" style="height: 60%"></div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-secondary rounded-t w-full" style="height: 80%"></div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-accent rounded-t w-full" style="height: 40%"></div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-info rounded-t w-full" style="height: 70%"></div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-success rounded-t w-full" style="height: 50%"></div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-warning rounded-t w-full" style="height: 90%"></div>
+            </div>
+            <div class="flex-1 flex flex-col justify-end">
+              <div class="bg-error rounded-t w-full" style="height: 30%"></div>
+            </div>
+          </div>
+          <div class="flex justify-between text-xs mt-2 text-base-content/70">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+      </div>
+      <!-- Recent Activity Table -->
+      <div class="card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Recent Orders</h2>
+          <div class="overflow-x-auto">
+            <table class="table table-zebra">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Customer</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Jane Doe</td>
+                  <td>2025-07-07</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td>$120.00</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>John Smith</td>
+                  <td>2025-07-06</td>
+                  <td><span class="badge badge-warning">Pending</span></td>
+                  <td>$75.00</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Mary Johnson</td>
+                  <td>2025-07-05</td>
+                  <td><span class="badge badge-error">Failed</span></td>
+                  <td>$60.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Sidebar -->
+  <div class="drawer-side">
+    <label for="dashboard-drawer" class="drawer-overlay"></label>
+    <aside class="menu p-4 w-64 min-h-full bg-base-100 text-base-content">
+      <h2 class="menu-title mb-2">Menu</h2>
+      <ul>
+        <li><a class="active">Dashboard</a></li>
+        <li><a>Orders</a></li>
+        <li><a>Products</a></li>
+        <li><a>Customers</a></li>
+        <li><a>Reports</a></li>
+        <li><a>Settings</a></li>
+      </ul>
+      <div class="mt-8">
+        <button class="btn btn-error btn-block">Logout</button>
+      </div>
+    </aside>
+  </div>
+</div>
