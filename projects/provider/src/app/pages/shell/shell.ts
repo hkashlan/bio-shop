@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet, RouterLink } from '@angular/router';
-import {  ActivityIcon, LucideAngularComponent, LucideAngularModule, ShoppingBasketIcon, UserRoundIcon, LogOutIcon } from 'lucide-angular';
+import {
+  ActivityIcon,
+  LucideAngularComponent,
+  LucideAngularModule,
+  ShoppingBasketIcon,
+  UserRoundIcon,
+  LogOutIcon,
+  XIcon,
+} from 'lucide-angular';
 
 @Component({
   selector: 'app-shell',
@@ -28,6 +36,7 @@ export class ShellComponent {
     },
   ];
   logoutIcon = LogOutIcon;
+  XIcon = XIcon;
 
   constructor(private router: Router) {}
 
