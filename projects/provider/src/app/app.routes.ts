@@ -1,19 +1,31 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login';
 import { DashboardComponent } from './pages/dashboard/dashboard';
-import { UploadComponent } from './pages/upload/upload';
+import { ShellComponent } from './pages/shell/shell';
 
 export const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent
+    path: '',
+    redirectTo: 'shell',
+    pathMatch: 'full',
   },
   {
-    path: 'upload',
-    component: UploadComponent
-  }
+    path: 'shell',
+    component: ShellComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full',
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
+    ],
+  },
 ];
