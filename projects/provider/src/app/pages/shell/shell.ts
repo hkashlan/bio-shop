@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import {
   ActivityIcon,
+  AlignJustifyIcon,
   LogOutIcon,
   LucideAngularModule,
   ShoppingBasketIcon,
@@ -40,6 +41,7 @@ export class ShellComponent {
     },
   ];
   logoutIcon = LogOutIcon;
+  AlignJustifyIcon = AlignJustifyIcon;
   XIcon = XIcon;
 
   logout(): void {
