@@ -1,13 +1,26 @@
 <!-- Responsive Dashboard Page using daisyUI 5 -->
 <div class="drawer lg:drawer-open min-h-screen bg-base-200">
   <!-- Sidebar toggle for mobile -->
-  <input id="dashboard-drawer" type="checkbox" class="drawer-toggle" />
+  <input class="drawer-toggle" id="dashboard-drawer" type="checkbox" />
   <div class="drawer-content flex flex-col">
     <!-- Navbar -->
     <div class="navbar bg-base-100 shadow-md sticky top-0 z-20">
       <div class="flex-none lg:hidden">
-        <label for="dashboard-drawer" class="btn btn-square btn-ghost drawer-button">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <label class="btn btn-square btn-ghost drawer-button" for="dashboard-drawer">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
         </label>
       </div>
       <div class="flex-1 px-2 text-xl font-bold">Bio Shop Dashboard</div>
@@ -70,7 +83,8 @@
             </div>
           </div>
           <div class="flex justify-between text-xs mt-2 text-base-content/70">
-            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span
+            ><span>Sat</span><span>Sun</span>
           </div>
         </div>
       </div>
@@ -120,7 +134,7 @@
   </div>
   <!-- Sidebar -->
   <div class="drawer-side">
-    <label for="dashboard-drawer" class="drawer-overlay"></label>
+    <label class="drawer-overlay" for="dashboard-drawer"></label>
     <aside class="menu p-4 w-64 min-h-full bg-base-100 text-base-content">
       <h2 class="menu-title mb-2">Menu</h2>
       <ul>
@@ -132,7 +146,7 @@
         <li><a>Settings</a></li>
       </ul>
       <div class="mt-8">
-        <button class="btn btn-error btn-block">Logout</button>
+        <button class="btn btn-error btn-block" [attr.type]="'button'">Logout</button>
       </div>
     </aside>
   </div>

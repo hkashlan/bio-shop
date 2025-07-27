@@ -1,23 +1,27 @@
-import { Component } from '@angular/core';
-import { Router, RouterOutlet, RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import {
   ActivityIcon,
-  LucideAngularComponent,
+  LogOutIcon,
   LucideAngularModule,
   ShoppingBasketIcon,
   UserRoundIcon,
-  LogOutIcon,
   XIcon,
 } from 'lucide-angular';
 
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [RouterOutlet, LucideAngularModule, RouterLink],
+  imports: [
+    RouterOutlet,
+    LucideAngularModule,
+    RouterLink,
+  ],
   templateUrl: './shell.html',
   styleUrl: './shell.scss',
 })
 export class ShellComponent {
+  router = inject(Router);
   menuItems = [
     {
       label: 'Dashboard',
@@ -38,10 +42,10 @@ export class ShellComponent {
   logoutIcon = LogOutIcon;
   XIcon = XIcon;
 
-  constructor(private router: Router) {}
-
-  logout() {
+  logout(): void {
     // Perform any cleanup or token invalidation here
-    this.router.navigate(['/login']);
+    this.router.navigate([
+      '/login',
+    ]);
   }
 }

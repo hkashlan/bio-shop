@@ -3,11 +3,11 @@ name: Deploy Providers App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if your default branch is not "main"
+      - main # Change this if your default branch is not "main"
       - project-setup
 
 permissions:
-  contents: write  # Needed to push to gh-pages
+  contents: write # Needed to push to gh-pages
 
 jobs:
   build-and-deploy:
@@ -20,16 +20,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.16.0  # or your project's version
+          node-version: 22.16.0 # or your project's version
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build all apps
-        run: npm run build  # Change this if your command is different
+        run: npm run build # Change this if your command is different
 
       - name: Deploy Providers app to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/provider/browser  # Adjust this path as needed
+          publish_dir: ./dist/provider/browser # Adjust this path as needed
